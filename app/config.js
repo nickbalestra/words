@@ -7,9 +7,7 @@ module.exports = ($stateProvider, $urlRouterProvider) => {
       template: require('./game/game.html'),
       controller: require('./game/game'),
       resolve: {
-        data: (Utils) => {
-          return Utils.data.$loaded();
-        }
+        data: (Utils) => Utils.data.$loaded()
       }
     })
 
@@ -24,9 +22,7 @@ module.exports = ($stateProvider, $urlRouterProvider) => {
       template: require('./leaderboard/leaderboard.html'),
       controller: require('./leaderboard/leaderboard'),
       resolve: {
-        data: (Utils) => {
-          return Utils.data.$loaded();
-        }
+        data: (Utils) => Utils.data.$loaded()
       }
     })
 };

@@ -56,7 +56,7 @@ module.exports = ($scope, $timeout, $state, Utils, data) => {
         
         var ref = new Firebase("https://wordsanagrams.firebaseio.com");
         ref.update({scores: topScores}, () => {
-          $state.transitionTo('leaderboard')
+          $state.transitionTo('leaderboard');
         });
 
       } else {
