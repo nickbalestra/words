@@ -1,12 +1,10 @@
-module.exports = function($http, $firebaseObject, $firebaseArray){
+module.exports = ($http, $firebaseObject, $firebaseArray) => {
   this.user = {};
 
-  // ref.child('words').set(["fragola", "melone", "prosciutttp"])
   var ref = new Firebase("https://wordsanagrams.firebaseio.com");
   this.data = $firebaseObject(ref);
   
-
-  this.startGame = function(state, userName) {
+  this.startGame = (state, userName) => {
     this.user.name = userName || '';
     state.transitionTo('game');
   };

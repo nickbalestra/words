@@ -14,10 +14,11 @@ module.exports = ($scope, $timeout, $state, Utils, data) => {
 
   // Helpers function 
   // =========================================================
-
-
+  // - startTimer()
+  // - shuffle()
+  // - nextWord
+  // - checkUserInput
   function startTimer() {
-
     // When Game is Over
     if ($scope.timeLeft < 1) {
 
@@ -92,7 +93,6 @@ module.exports = ($scope, $timeout, $state, Utils, data) => {
   }
 
   $scope.checkUserInput = function(e) {
-
     var word = e.target.value;
     
     // For each character that was deleted whilst entering 
