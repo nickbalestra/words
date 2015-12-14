@@ -115,6 +115,14 @@ a.homeLink h3:hover {
   
 }
 
+.timerWarning {
+  color: #f0ad4e;
+}
+
+.timerDanger {
+  color: #d9534f;
+}
+
 
 .spinner {
   padding-top: 150px;

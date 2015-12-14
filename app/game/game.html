@@ -3,10 +3,10 @@
     <div class="container-fluid gameInfo">
       <div class="row">
         <div class="col-sm-9 text-right">
-          <h4>Scores: <strong>{{ scores }}</strong></h4>
+          <h4>Scores: <span><strong>{{ scores }}</strong></span></h4>
         </div>
         <div class="col-sm-3 text-right">
-          <h4>Time left: <strong>{{ timeLeft }}</strong></h4>
+          <h4>Time left: <span ng-class="{ 'timerWarning': timeLeft <= 20, 'timerDanger':  timeLeft <= 10}"><strong>{{ timeLeft }}</strong></span></h4>
         </div>
       </div>
     </div>
