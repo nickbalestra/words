@@ -22,8 +22,8 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin("styles.css"),
-    // new webpack.optimize.UglifyJsPlugin({mangle: false}),
-    // new webpack.optimize.DedupePlugin(),
-    // new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.UglifyJsPlugin({mangle: false}),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin()
   ]
 };
