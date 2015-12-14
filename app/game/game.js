@@ -16,8 +16,8 @@ module.exports = ($scope, $timeout, $state, Utils, data) => {
   // =========================================================
   // - startTimer()
   // - shuffle()
-  // - nextWord
-  // - checkUserInput
+  // - nextWord()
+  // - checkUserInput()
   function startTimer() {
     // When Game is Over
     if ($scope.timeLeft < 1) {
