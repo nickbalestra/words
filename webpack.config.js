@@ -13,7 +13,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'ng-annotate' },
+      { test: /\.js$/, exclude: [node_modules_dir], loader: 'ng-annotate!babel?presets=es2015'},
       { test: /\.html$/, loader: 'raw' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
       { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: "url-loader?limit=1024&name=fonts/[name].[ext]" }
@@ -22,8 +22,8 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin("styles.css"),
-    new webpack.optimize.UglifyJsPlugin({mangle: false}),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin()
+    // new webpack.optimize.UglifyJsPlugin({mangle: false}),
+    // new webpack.optimize.DedupePlugin(),
+    // new webpack.optimize.OccurenceOrderPlugin()
   ]
 };

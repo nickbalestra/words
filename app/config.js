@@ -1,4 +1,4 @@
-module.exports = function($stateProvider, $urlRouterProvider) {
+module.exports = ($stateProvider, $urlRouterProvider) => {
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
@@ -7,7 +7,7 @@ module.exports = function($stateProvider, $urlRouterProvider) {
       template: require('./game/game.html'),
       controller: require('./game/game'),
       resolve: {
-        data: function(Utils) {
+        data: (Utils) => {
           return Utils.data.$loaded();
         }
       }
@@ -24,16 +24,9 @@ module.exports = function($stateProvider, $urlRouterProvider) {
       template: require('./leaderboard/leaderboard.html'),
       controller: require('./leaderboard/leaderboard'),
       resolve: {
-        data: function(Utils) {
+        data: (Utils) => {
           return Utils.data.$loaded();
         }
       }
     })
 };
-
-
-// Utils.getData(function(data){
-//     words = data.words.slice();
-//     startTimer();
-//     nextWord();
-//   });

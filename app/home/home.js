@@ -1,7 +1,7 @@
-module.exports = function($scope, $timeout, $state, Utils, $firebaseObject) {
+module.exports = ($scope, $timeout, $state, Utils, $firebaseObject) => {
   $scope.userName = Utils.user.name;
   
-  $scope.startGame = function(){
+  $scope.startGame = () => {
     Utils.startGame($state, $scope.userName);
   };
 };
